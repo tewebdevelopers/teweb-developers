@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Triotiz Web Developers</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Why you should have a website.</a></h1>
+        </div>
+
+            <div>
+                <p>published: 14.06.2017, 12:14</p>
+                <h2><a href="">Branding.</a></h2>
+                <p>
+              Let’s say building a brand is the endgame. If this is the case then the internet is an absolute necessity as far as where to anchor the brand. The anchor of the anchor is without a doubt a website. While social media profiles, YouTube videos, and digital advertising are important of course, they are supplemental to the existence of a website.</p>
+           </div>
+
+
+        <div>
+            <p>published: 14.06.2017, 12:14</p>
+            <h2><a href="">Sales</a></h2>
+            <p>Of course, for any entity in the business of turning a profit, the real reason to build a website in 2016 is to tap into sales. Making money and being online go hand in hand in today’s economy. Even if businesses without a website presence are making money, there’s still a good chance a website can help them expand.</p>
+        </div>
+
+        <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>published: {{ post.published_date }}</p>
+                    </div>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</html>
