@@ -1,4 +1,6 @@
+{% extends 'blog/base.html' %}
 {% load staticfiles %}
+
 <html>
     <head>
         <title>Teweb Developers</title>
@@ -14,31 +16,34 @@
 
             <div>
                 <p>published: 14.06.2017, 12:14</p>
-                <h2><a href="">Branding.</a></h2>
-                <p>
-              Let's say building a brand is the endgame. If this is the case then the internet is an absolute necessity as far as where to anchor the brand. The anchor of the anchor is without a doubt a website. While social media profiles, YouTube videos, and digital advertising are important of course, they are supplemental to the existence of a website.</p>
+                <h2><a href=""></a></h2>
+                <p></p>
            </div>
 
 
         <div>
-            <p>published: 14.06.2017, 12:14</p>
-            <h2><a href="">Sales</a></h2>
-            <p>Of course, for any entity in the business of turning a profit, the real reason to build a website in 2016 is to tap into sales. Making money and being online go hand in hand in the present economy. Even if businesses without a website presence are making money, there’s still a good chance a website can help them expand.</p>
+            <p> </p>
+            <h2><a href=""></a></h2>
+            <p></p>
         </div>
 
         <div class="content container">
     <div class="row">
-        <div class="col-md
+        <div class="col-md-8">
+            {% block content %}
             {% for post in posts %}
                 <div class="post">
                     <div class="date">
-                        <p>published: {{ post.published_date }}</p>
+                        {{ post.published_date }}
                     </div>
-                    <h1><a href="">{{ post.title }}</a></h1>
+                    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
                     <p>{{ post.text|linebreaksbr }}</p>
+                    <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
                 </div>
             {% endfor %}
+           {% endblock content %}
         </div>
     </div>
 </div>
 </html>
+
