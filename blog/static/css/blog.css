@@ -1,3 +1,11 @@
+.container {
+  display: grid;
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  grid-gap: 10px;
+}
+
 h1 a {
     color: #FCA205;
     font-family: 'Sans Serif';
@@ -23,6 +31,7 @@ h1 a {
 
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
+    
 }
 
 .date {

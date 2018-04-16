@@ -1,5 +1,6 @@
 {% load staticfiles %}
 <html>
+<div class="container">
     <head>
         <title>Teweb Developers</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -8,6 +9,7 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
+    
     
     <div class="page-header">
      
@@ -21,21 +23,26 @@
         <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>        
        {% endif %}                     
         <h1><a href="/">Teweb Developers</a></h1>
-         <img src="https://thumbs.dreamstime.com/z/responsive-web-design-shown-different-devices-33722502.jpg" alt="resposive design with display size" width=400px>
+    </div>
+    <div>
+    <img src="https://thumbs.dreamstime.com/z/responsive-web-design-shown-different-devices-33722502.jpg" alt="resposive design with display size" width=400p>
     </div>
     <div class="content container">
         <div class="row">
             <div class="col-md-8">
             {% block content %}
             {% endblock %}
-            </div>
+       
+     </div>
         </div>
     </div>
     <div>
       
     </div>
+
 </body>
 <footer>
    
 </footer>
+</div>
 </html>
