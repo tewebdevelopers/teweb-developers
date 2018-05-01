@@ -1,36 +1,8 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
 
-<html>
-    <head>
-        <title>Teweb Developers</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Why you should have a website.</a></h1>
-        </div>
-
-            <div>
-                <p>published: 14.06.2017, 12:14</p>
-                <h2><a href="YOUR BUSINESS WILL GAIN CREDIBILITY"></a></h2>
-                <p>Having a website will not only provide the information they are looking for, but it will give your business credibility. It says, I am here, I mean business, and I am in it for the long haul.</p>
-              
-           </div>
 
 
-        <div>
-            <p>More and more people are searching online for things they want, for solutions to their problems, to compare prices, or just to get some information about a store, restaurant or business before they purchase from them. If you don’t have a website, potential customers will go to your competitors who do, especially if you are a home-based business without a bricks-and-mortar address. </p>
-            <h2><a href="IT SAVES YOU MONEY IN THE LONG TERM"></a></h2>
-            <p>As a small business owner, especially one that is just starting out, you’re probably thinking you can’t afford a professional website. But you really can’t afford NOT to. Although the cost of designing a website varies depending on your needs and your skill level, once it’s up and running, a professional website is worth the initial investment, especially if built using WordPress, which enables you to add and change your own content regularly, saving you money in updates.</p>
-        <p>Even if your skill levels are slim to none and you need to continually pay your website designer/developer to maintain and update your website for you, the upkeep costs are still lower than ongoing traditional marketing, and the investment is certainly worth the number of potential customers that will find your business online each year.</p>
-        </div>
-
-        <div class="content container">
-    <div class="row">
         <div class="col-md-8">
             {% block content %}
             {% for post in posts %}
@@ -45,7 +17,3 @@
             {% endfor %}
            {% endblock content %}
         </div>
-    </div>
-</div>
-</html>
-
