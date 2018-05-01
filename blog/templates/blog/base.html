@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <html>
-<div class="container">
+
     <head>
         <title>Teweb Developers</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -10,7 +10,7 @@
     </head>
     <body>
     
-    
+    <div class="container">
     <div class="page-header">
      
        {% if user.is_authenticated %}
@@ -40,9 +40,11 @@
       
     </div>
 
-</body>
 <footer>
    
 </footer>
 </div>
+
+</body>
+
 </html>
